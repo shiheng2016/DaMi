@@ -1,0 +1,624 @@
+/*====================== 公共部分样式 =========================*/
+
+.container {
+    min-width: 950px;
+}
+
+
+/*====================== header部分 =========================*/
+
+.mg-header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url("../img/top-background.png") no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.mg-header>div {
+    position: absolute;
+}
+
+.logo {
+    top: 10%;
+    left: 23%;
+    width: 21%;
+    transition: position .3s ease;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.detail {
+    top: 10px;
+    left: 200px;
+}
+
+.detail-bg {
+    top: 10px;
+    left: 200px;
+}
+
+.price {
+    top: 430px;
+    left: 730px;
+}
+
+
+/*导航栏*/
+
+.navbar {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+}
+
+.navbar ul {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 90%;
+    margin-left: -45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    width: 18%;
+    height: 38px;
+    border: 2px solid rgb(207, 169, 114);
+    list-style: none;
+    color: rgb(207, 169, 114);
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+}
+
+
+/*=======================轮播图==========================*/
+
+ul {
+    list-style: none;
+}
+
+.lunbo-container {
+    width: 892px;
+    height: 656px;
+    margin: 0 auto;
+}
+
+#lunbo-wrap {
+    position: relative;
+    width: 892px;
+    height: 652px;
+    margin: 0 auto;
+    /*border: 1px solid #9cc5ef;*/
+    overflow: hidden;
+    /*z-index: -50;*/
+}
+
+#lunbo-slider {
+    width: 300%;
+    height: 100%;
+    color: #fff;
+    margin-left: 0;
+    -webkit-animation: slide1 5s ease-out infinite;
+}
+
+#lunbo-slider li {
+    float: left;
+    width: 892px;
+    height: 100%;
+}
+
+#lunbo-slider li:nth-child(1) {
+    /*background:#6bacef;*/
+}
+
+#lunbo-slider li:nth-child(2) {
+    /*background:#297cd3;*/
+}
+
+#lunbo-slider li:nth-child(3) {
+    /*background:#01254a;*/
+}
+
+
+/*创建三种动画策略*/
+
+@-webkit-keyframes slide1 {
+    0% {
+        margin-left: 0;
+    }
+    23% {
+        margin-left: 0;
+    }
+    33% {
+        margin-left: -892px;
+    }
+    56% {
+        margin-left: -892px;
+    }
+    66% {
+        margin-left: -1784px;
+    }
+    90% {
+        margin-left: -1784px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes slide2 {
+    0% {
+        margin-left: -892px;
+    }
+    23% {
+        margin-left: -892px;
+    }
+    33% {
+        margin-left: -1784px;
+    }
+    56% {
+        margin-left: -1784px;
+    }
+    66% {
+        margin-left: 0;
+    }
+    90% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -892px;
+    }
+}
+
+@-webkit-keyframes slide3 {
+    0% {
+        margin-left: -1784px;
+    }
+    23% {
+        margin-left: -1784px;
+    }
+    33% {
+        margin-left: 0;
+    }
+    56% {
+        margin-left: 0;
+    }
+    66% {
+        margin-left: -892px;
+    }
+    90% {
+        margin-left: -892px;
+    }
+    100% {
+        margin-left: -1784px;
+    }
+}
+
+
+/*修改动画名称*/
+
+#l01:checked~#lunbo-wrap #lunbo-slider {
+    -webkit-animation-name: slide1;
+}
+
+#l02:checked~#lunbo-wrap #lunbo-slider {
+    -webkit-animation-name: slide2;
+}
+
+#l03:checked~#lunbo-wrap #lunbo-slider {
+    -webkit-animation-name: slide3;
+}
+
+
+/*短暂地取消动画名称，模拟重启动画*/
+
+#l01:active~#lunbo-wrap #lunbo-slider {
+    -webkit-animation-name: none;
+    margin-left: 0;
+}
+
+#l02:active~#lunbo-wrap #lunbo-slider {
+    -webkit-animation-name: none;
+    margin-left: -892px;
+}
+
+#l03:active~#lunbo-wrap #lunbo-slider {
+    -webkit-animation-name: none;
+    margin-left: -1784px;
+}
+
+#lunbo-opts {
+    position: relative;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: -50px;
+    z-index: 1000;
+    color: #fff;
+    text-align: center;
+    font: 10px/20px Microsoft Yahei;
+}
+
+#lunbo-opts label {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    background: #01254a;
+    cursor: pointer;
+}
+
+#lunbo-opts label:hover {
+    background: #405871;
+}
+
+
+/* 隐藏Input按钮*/
+
+#l01,
+#l02,
+#l03 {
+    display: none;
+}
+
+
+/*====================== content部分 =========================*/
+
+html {
+    background: url("../img/container.png")repeat-y top center;
+    background-size: 1920 auto;
+}
+
+.mg-xm .xm-tittle {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.xm-tittle img {
+    width: 100%;
+    height: auto;
+}
+
+.mg-xm .xm-tittle2 {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.xm-tittle2 img {
+    width: 100%;
+    height: auto;
+}
+
+.xm-info {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.xm-info img {
+    width: 100%;
+    height: auto;
+}
+
+.xm_item {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.xm-item-img {
+    width: 90%;
+    height: auto;
+}
+
+.xm-item-img img {
+    width: 100%;
+    height: auto;
+}
+
+.xm-item-info {
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.xm-item-info img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .xm_item {
+        width: 70%;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+.mg-zl .zl-item {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mg-zl .zl-iem {
+    margin: 0 auto;
+}
+
+.mg-zl .zl-iem>img {
+    width: 90%;
+    margin-left: 25px;
+    margin: 0 auto;
+}
+
+.mg-zl .zl-items {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mg-zl .zl-item>img {
+    width: 100%;
+    height: auto;
+}
+
+.mg-zl .zl-items>img {
+    width: 100%;
+}
+
+.mg-zl .zl-itms {
+    width: 100%;
+}
+
+.mg-zl .zl-itms>img {
+    width: 80%;
+}
+
+.mg-zl .zl-ims {
+    width: 100%;
+}
+
+.mg-zl .zl-ims>img {
+    width: 80%;
+}
+
+.left {
+    margin-top: 50px;
+}
+
+.mg-zl .san {
+    margin-bottom: 50px;
+}
+
+.zl-itms .xm-item-info {
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.zl-itms .xm-item-info h3 {
+    color: #0A0A0A;
+    font-size: 26px;
+    border-bottom: 1px solid #0A0A0A;
+    text-align: center;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+.zl-itms .xm-item-info>p {
+    color: #0A0A0A;
+    font-size: 17px;
+    text-align: center;
+}
+
+.zl-itms .xm-item-info>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A40000;
+}
+
+.zl-itms .xm-item-info>div>p {
+    margin-bottom: 0;
+    background-color: #A40000;
+    color: #fff;
+    font-size: 18px;
+    flex: 1;
+    text-align: center;
+}
+
+.zl-itms .xm-item-info>div span {
+    font-size: 26px;
+}
+
+.zl-itms .xm-item-info>div>a {
+    color: #A40000;
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.zl-itms .xm-item-info img {
+    width: 100%;
+    height: auto;
+}
+
+.zl-ims .xm-item-info {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.zl-ims .xm-item-info h3 {
+    color: #0A0A0A;
+    font-size: 20px;
+    border-bottom: 1px solid #0A0A0A;
+    text-align: center;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+.zl-ims .xm-item-info>p {
+    color: #0A0A0A;
+    font-size: 10px;
+    text-align: center;
+}
+
+.zl-ims .xm-item-info>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A40000;
+}
+
+.zl-ims .xm-item-info>div>p {
+    margin-bottom: 0;
+    background-color: #A40000;
+    color: #fff;
+    font-size: 12px;
+    flex: 1;
+    text-align: center;
+}
+
+.zl-ims .xm-item-info>div span {
+    font-size: 20px;
+}
+
+.zl-ims .xm-item-info>div>a {
+    color: #A40000;
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.zl-ims .xm-item-info img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*====================== footer部分 =========================*/
+
+.mg-footer {
+    width: 100%;
+    height: 100px;
+}
+
+.bottom {
+    clear: both;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 0;
+    line-height: 25px;
+    color: #666;
+    border-top: #ddd 1px solid;
+}
+
+.bottom a {
+    margin: 0 7px;
+    color: #666;
+}
+
+.bottom a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+#mg-apply {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+#mg-apply .mg-apply {
+    height: 400px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#mg-apply .mg-apply>div {
+    float: left;
+    margin: 50px 0 0 80px;
+}
+
+#mg-apply .mg-apply-left {
+    width: 480px;
+    height: 250px;
+    background: #F5F3F0;
+}
+
+
+/*右侧样式*/
+
+#mg-apply .mg-apply-right {
+    width: 320px;
+    height: 200px;
+}
+
+#mg-apply .phone {
+    text-align: justify;
+}
+
+#mg-apply .immed-2 {
+    width: 130px;
+    height: 36px;
+    background: rgb(207, 169, 114);
+    margin-top: 47px;
+}
+
+#mg-apply .immed-2 p {
+    text-align: center;
+    line-height: 36px;
+}
+
+#mg-apply .mg-apply-login input {
+    background: rgb(207, 169, 114);
+    padding-left: 5px;
+    width: 155px;
+    height: 20px;
+}
+
+#mg-apply .mg-apply-login p {
+    margin-top: 5px;
+}
+
+#mg-apply .mg-article {
+    display: flex;
+}
+
+#mg-apply .mg-left ul li {
+    margin-top: 12px;
+}
+
+#mg-apply .mr-right {
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+#mg-apply .mr-right ul li {
+    margin-top: 12px;
+    list-style: none;
+}
+
+#ajaxSub a {
+    margin-left: 22px;
+    color: white;
+}
